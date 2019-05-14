@@ -99,6 +99,12 @@ class Sn_Cpt_Admin {
 		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/sn-cpt-admin.js', array( 'jquery' ), $this->version, false );
 
 	}
+	public function add_admin_menu(){
+		add_menu_page("Social Network CPT", "SN CPT Config", "manage_options","cpt_config",array($this,'admin_page'));
+	}
+	public function admin_page(){
+		include_once 'partials/sn-cpt-admin-display.php';
+	}
 	
 	public function register_widgets(){
 		register_widget('FB_Page_Widget');
@@ -132,7 +138,7 @@ class Sn_Cpt_Admin {
 	
 	// publier avant enregistrer
 	public function publish_post(){
-		//include_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/function-cpt-social-publish_post.php';
+		include_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/function-sn-cpt-publish_post.php';
 	}
 	public function un_publish_post(){
 		echo "poste deleted";

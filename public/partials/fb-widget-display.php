@@ -29,9 +29,12 @@
 <!-- This file should primarily consist of HTML with a little bit of PHP. -->
 <?php 
     $fb_title = isset($instance['fb_title']) ? $instance['fb_title']:'Actualité';
-    $fb_app_id = isset($instance['fb_app_id']) ? $instance['fb_app_id']:'';
-    $fb_page_id = isset($instance['fb_page_id']) ? $instance['fb_page_id']:'';
-    $app_token = isset($instance['app_token']) ? $instance['app_token']:'';
+    $fb_app_id=get_option("fb_app_id");
+    $fb_page_id=get_option('fb_page_id');
+    $app_token=get_option('fb_page_token');
+    
+
+
 ?>
 <script>
       window.fbAsyncInit = function() {

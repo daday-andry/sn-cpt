@@ -30,24 +30,21 @@
                 $k++;
             }
         }
-        //Verifier si modification
+        //Verifier si modification ou ajout
         $facebook_post_id=get_post_meta($post->ID,"facebook_post_id");
         $fb_post_action=(!$facebook_post_id==NULL)?$facebook_post_id[0]:$fb_page_id.(count($medias)>1)?"/feed":"/photos";
         $fb_post_args['message']=stripslashes($_POST['content']);
-        var_dump(count($medias));
-        exit();
         
-        /*
+        $response="";
         // executer requette
         try {
             $response = $fb->post($fb_post_action,$fb_post_args);
         } catch(Facebook\Exceptions\FacebookResponseException $e) {
-            echo 'Graph returned an error: ' . $e->getMessage();
-            exit;
+            $response = 'Graph returned an error: ' . $e->getMessage();
         } catch(Facebook\Exceptions\FacebookSDKException $e) {
-            echo 'Facebook SDK returned an error: ' . $e->getMessage();
-            exit;
+            $response= 'Facebook SDK returned an error: ' . $e->getMessage();
         }
+        /*
         $graphNode = $response->getGraphNode();
 
         if($facebook_post_id==NULL)
