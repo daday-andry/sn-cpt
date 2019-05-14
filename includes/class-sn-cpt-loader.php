@@ -6,8 +6,8 @@
  * @link       andrynirina.portfoliobox.net
  * @since      1.0.0
  *
- * @package    Cpt_Social_Network
- * @subpackage Cpt_Social_Network/includes
+ * @package    Sn_Cpt
+ * @subpackage Sn_Cpt/includes
  */
 
 /**
@@ -17,11 +17,11 @@
  * the plugin, and register them with the WordPress API. Call the
  * run function to execute the list of actions and filters.
  *
- * @package    Cpt_Social_Network
- * @subpackage Cpt_Social_Network/includes
- * @author     ANDRY Nirina <andrysahaedena@gmail.com>
+ * @package    Sn_Cpt
+ * @subpackage Sn_Cpt/includes
+ * @author     DADAY Andry <andrysahaedena@gmail.com>
  */
-class Cpt_Social_Network_Loader {
+class Sn_Cpt_Loader {
 
 	/**
 	 * The array of actions registered with WordPress.

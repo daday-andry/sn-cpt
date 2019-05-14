@@ -22,7 +22,7 @@
  * @link       andrynirina.portfoliobox.net
  * @since      1.0.0
  *
- * @package    Cpt_Social_Network
+ * @package    Sn_Cpt
  */
 
 // If uninstall not called from WordPress, then exit.

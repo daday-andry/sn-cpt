@@ -9,8 +9,8 @@
  * @link       andrynirina.portfoliobox.net
  * @since      1.0.0
  *
- * @package    Cpt_Social_Network
- * @subpackage Cpt_Social_Network/includes
+ * @package    Sn_Cpt
+ * @subpackage Sn_Cpt/includes
  */
 
 /**
@@ -23,11 +23,11 @@
  * version of the plugin.
  *
  * @since      1.0.0
- * @package    Cpt_Social_Network
- * @subpackage Cpt_Social_Network/includes
- * @author     ANDRY Nirina <andrysahaedena@gmail.com>
+ * @package    Sn_Cpt
+ * @subpackage Sn_Cpt/includes
+ * @author     DADAY Andry <andrysahaedena@gmail.com>
  */
-class Cpt_Social_Network {
+class Sn_Cpt {
 
 	/**
 	 * The loader that's responsible for maintaining and registering all hooks that power
@@ -35,7 +35,7 @@ class Cpt_Social_Network {
 	 *
 	 * @since    1.0.0
 	 * @access   protected
-	 * @var      Cpt_Social_Network_Loader    $loader    Maintains and registers all hooks for the plugin.
+	 * @var      Sn_Cpt_Loader    $loader    Maintains and registers all hooks for the plugin.
 	 */
 	protected $loader;
 
@@ -67,8 +67,8 @@ class Cpt_Social_Network {
 	 * @since    1.0.0
 	 */
 	public function __construct() {
-		if ( defined( 'CPT_SOCIAL_NETWORK_VERSION' ) ) {
-			$this->version = CPT_SOCIAL_NETWORK_VERSION;
+		if ( defined( 'SN_CPT_VERSION' ) ) {
+			$this->version = SN_CPT_VERSION;
 		} else {
 			$this->version = '1.0.0';
 		}
@@ -86,10 +86,10 @@ class Cpt_Social_Network {
 	 *
 	 * Include the following files that make up the plugin:
 	 *
-	 * - Cpt_Social_Network_Loader. Orchestrates the hooks of the plugin.
-	 * - Cpt_Social_Network_i18n. Defines internationalization functionality.
-	 * - Cpt_Social_Network_Admin. Defines all hooks for the admin area.
-	 * - Cpt_Social_Network_Public. Defines all hooks for the public side of the site.
+	 * - Sn_Cpt_Loader. Orchestrates the hooks of the plugin.
+	 * - Sn_Cpt_i18n. Defines internationalization functionality.
+	 * - Sn_Cpt_Admin. Defines all hooks for the admin area.
+	 * - Sn_Cpt_Public. Defines all hooks for the public side of the site.
 	 *
 	 * Create an instance of the loader which will be used to register the hooks
 	 * with WordPress.
@@ -122,21 +122,20 @@ class Cpt_Social_Network {
 		 */
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-sn-cpt-public.php';
 
-
 		/**
 		 * For widgets
 		 * 
 		 */
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-sn-cpt-widgets.php';
 
-		$this->loader = new Cpt_Social_Network_Loader();
+		$this->loader = new Sn_Cpt_Loader();
 
 	}
 
 	/**
 	 * Define the locale for this plugin for internationalization.
 	 *
-	 * Uses the Cpt_Social_Network_i18n class in order to set the domain and to register the hook
+	 * Uses the Sn_Cpt_i18n class in order to set the domain and to register the hook
 	 * with WordPress.
 	 *
 	 * @since    1.0.0
@@ -144,7 +143,7 @@ class Cpt_Social_Network {
 	 */
 	private function set_locale() {
 
-		$plugin_i18n = new Cpt_Social_Network_i18n();
+		$plugin_i18n = new Sn_Cpt_i18n();
 
 		$this->loader->add_action( 'plugins_loaded', $plugin_i18n, 'load_plugin_textdomain' );
 
@@ -159,7 +158,7 @@ class Cpt_Social_Network {
 	 */
 	private function define_admin_hooks() {
 
-		$plugin_admin = new Cpt_Social_Network_Admin( $this->get_plugin_name(), $this->get_version() );
+		$plugin_admin = new Sn_Cpt_Admin( $this->get_plugin_name(), $this->get_version() );
 
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
@@ -168,10 +167,6 @@ class Cpt_Social_Network {
 		$this->loader->add_action( 'init', $plugin_admin, 'register_social_network_cpt' );
 		$this->loader->add_action( 'publish_social_network_cpt',$plugin_admin, 'publish_post' );
 		$this->loader->add_action( 'wp_trash_social_network_cpt',$plugin_admin, 'un_publish_post' );
-
-
-
-
 	}
 
 	/**
@@ -183,7 +178,7 @@ class Cpt_Social_Network {
 	 */
 	private function define_public_hooks() {
 
-		$plugin_public = new Cpt_Social_Network_Public( $this->get_plugin_name(), $this->get_version() );
+		$plugin_public = new Sn_Cpt_Public( $this->get_plugin_name(), $this->get_version() );
 
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
@@ -214,7 +209,7 @@ class Cpt_Social_Network {
 	 * The reference to the class that orchestrates the hooks with the plugin.
 	 *
 	 * @since     1.0.0
-	 * @return    Cpt_Social_Network_Loader    Orchestrates the hooks of the plugin.
+	 * @return    Sn_Cpt_Loader    Orchestrates the hooks of the plugin.
 	 */
 	public function get_loader() {
 		return $this->loader;

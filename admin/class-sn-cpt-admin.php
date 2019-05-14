@@ -6,8 +6,8 @@
  * @link       andrynirina.portfoliobox.net
  * @since      1.0.0
  *
- * @package    Cpt_Social_Network
- * @subpackage Cpt_Social_Network/admin
+ * @package    Sn_Cpt
+ * @subpackage Sn_Cpt/admin
  */
 
 /**
@@ -16,11 +16,11 @@
  * Defines the plugin name, version, and two examples hooks for how to
  * enqueue the admin-specific stylesheet and JavaScript.
  *
- * @package    Cpt_Social_Network
- * @subpackage Cpt_Social_Network/admin
- * @author     ANDRY Nirina <andrysahaedena@gmail.com>
+ * @package    Sn_Cpt
+ * @subpackage Sn_Cpt/admin
+ * @author     DADAY Andry <andrysahaedena@gmail.com>
  */
-class Cpt_Social_Network_Admin {
+class Sn_Cpt_Admin {
 
 	/**
 	 * The ID of this plugin.
@@ -65,13 +65,14 @@ class Cpt_Social_Network_Admin {
 		 * This function is provided for demonstration purposes only.
 		 *
 		 * An instance of this class should be passed to the run() function
-		 * defined in Cpt_Social_Network_Loader as all of the hooks are defined
+		 * defined in Sn_Cpt_Loader as all of the hooks are defined
 		 * in that particular class.
 		 *
-		 * The Cpt_Social_Network_Loader will then create the relationship
+		 * The Sn_Cpt_Loader will then create the relationship
 		 * between the defined hooks and the functions defined in this
 		 * class.
 		 */
+
 		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/sn-cpt-admin.css', array(), $this->version, 'all' );
 
 	}
@@ -87,15 +88,16 @@ class Cpt_Social_Network_Admin {
 		 * This function is provided for demonstration purposes only.
 		 *
 		 * An instance of this class should be passed to the run() function
-		 * defined in Cpt_Social_Network_Loader as all of the hooks are defined
+		 * defined in Sn_Cpt_Loader as all of the hooks are defined
 		 * in that particular class.
 		 *
-		 * The Cpt_Social_Network_Loader will then create the relationship
+		 * The Sn_Cpt_Loader will then create the relationship
 		 * between the defined hooks and the functions defined in this
 		 * class.
 		 */
 
 		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/sn-cpt-admin.js', array( 'jquery' ), $this->version, false );
+
 	}
 	public function add_admin_menu(){
 		add_menu_page("Social Network CPT", "SN CPT Config", "manage_options","cpt_config",array($this,'admin_page'));
@@ -136,7 +138,7 @@ class Cpt_Social_Network_Admin {
 	
 	}
 	
-// publier avant enregistrer
+	// publier avant enregistrer
 	public function publish_post(){
 		//include_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/function-cpt-social-publish_post.php';
 	}

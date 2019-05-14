@@ -6,8 +6,8 @@
  * @link       andrynirina.portfoliobox.net
  * @since      1.0.0
  *
- * @package    Cpt_Social_Network
- * @subpackage Cpt_Social_Network/includes
+ * @package    Sn_Cpt
+ * @subpackage Sn_Cpt/includes
  */
 
 /**
@@ -16,11 +16,11 @@
  * This class defines all code necessary to run during the plugin's activation.
  *
  * @since      1.0.0
- * @package    Cpt_Social_Network
- * @subpackage Cpt_Social_Network/includes
- * @author     ANDRY Nirina <andrysahaedena@gmail.com>
+ * @package    Sn_Cpt
+ * @subpackage Sn_Cpt/includes
+ * @author     DADAY Andry <andrysahaedena@gmail.com>
  */
-class Cpt_Social_Network_Activator {
+class Sn_Cpt_Activator {
 
 	/**
 	 * Short Description. (use period)

@@ -6,8 +6,8 @@
  * @link       andrynirina.portfoliobox.net
  * @since      1.0.0
  *
- * @package    Cpt_Social_Network
- * @subpackage Cpt_Social_Network/public
+ * @package    Sn_Cpt
+ * @subpackage Sn_Cpt/public
  */
 
 /**
@@ -16,11 +16,11 @@
  * Defines the plugin name, version, and two examples hooks for how to
  * enqueue the public-facing stylesheet and JavaScript.
  *
- * @package    Cpt_Social_Network
- * @subpackage Cpt_Social_Network/public
- * @author     ANDRY Nirina <andrysahaedena@gmail.com>
+ * @package    Sn_Cpt
+ * @subpackage Sn_Cpt/public
+ * @author     DADAY Andry <andrysahaedena@gmail.com>
  */
-class Cpt_Social_Network_Public {
+class Sn_Cpt_Public {
 
 	/**
 	 * The ID of this plugin.
@@ -65,10 +65,10 @@ class Cpt_Social_Network_Public {
 		 * This function is provided for demonstration purposes only.
 		 *
 		 * An instance of this class should be passed to the run() function
-		 * defined in Cpt_Social_Network_Loader as all of the hooks are defined
+		 * defined in Sn_Cpt_Loader as all of the hooks are defined
 		 * in that particular class.
 		 *
-		 * The Cpt_Social_Network_Loader will then create the relationship
+		 * The Sn_Cpt_Loader will then create the relationship
 		 * between the defined hooks and the functions defined in this
 		 * class.
 		 */
@@ -88,10 +88,10 @@ class Cpt_Social_Network_Public {
 		 * This function is provided for demonstration purposes only.
 		 *
 		 * An instance of this class should be passed to the run() function
-		 * defined in Cpt_Social_Network_Loader as all of the hooks are defined
+		 * defined in Sn_Cpt_Loader as all of the hooks are defined
 		 * in that particular class.
 		 *
-		 * The Cpt_Social_Network_Loader will then create the relationship
+		 * The Sn_Cpt_Loader will then create the relationship
 		 * between the defined hooks and the functions defined in this
 		 * class.
 		 */

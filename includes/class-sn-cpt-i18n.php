@@ -9,8 +9,8 @@
  * @link       andrynirina.portfoliobox.net
  * @since      1.0.0
  *
- * @package    Cpt_Social_Network
- * @subpackage Cpt_Social_Network/includes
+ * @package    Sn_Cpt
+ * @subpackage Sn_Cpt/includes
  */
 
 /**
@@ -20,11 +20,11 @@
  * so that it is ready for translation.
  *
  * @since      1.0.0
- * @package    Cpt_Social_Network
- * @subpackage Cpt_Social_Network/includes
- * @author     ANDRY Nirina <andrysahaedena@gmail.com>
+ * @package    Sn_Cpt
+ * @subpackage Sn_Cpt/includes
+ * @author     DADAY Andry <andrysahaedena@gmail.com>
  */
-class Cpt_Social_Network_i18n {
+class Sn_Cpt_i18n {
 
 
 	/**

@@ -8,8 +8,8 @@
  * @link       andrynirina.portfoliobox.net
  * @since      1.0.0
  *
- * @package    Cpt_Social_Network
- * @subpackage Cpt_Social_Network/public/partials
+ * @package    Sn_Cpt
+ * @subpackage Sn_Cpt/public/partials
  */
 ?>
 
