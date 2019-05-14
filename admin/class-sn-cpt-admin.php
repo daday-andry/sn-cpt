@@ -99,15 +99,7 @@ class Sn_Cpt_Admin {
 		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/sn-cpt-admin.js', array( 'jquery' ), $this->version, false );
 
 	}
-	public function add_admin_menu(){
-		add_menu_page("Social Network CPT", "SN CPT Config", "manage_options","cpt_config",array($this,'admin_page'));
-	}
-	public function admin_page(){
-		include_once 'partials/sn-cpt-admin-display.php';
-	}
-
-
-
+	
 	public function register_widgets(){
 		register_widget('FB_Page_Widget');
 	}
@@ -116,8 +108,8 @@ class Sn_Cpt_Admin {
 
 	public function register_social_network_cpt(){
 		$cpt_args = array(
-			'label' => __( 'Social Network CPT' ),
-			'singular_label' => __( 'Social Network CPT' ),
+			'label' => __( 'Social Net. Post' ),
+			'singular_label' => __( 'Social Network post' ),
 			'public' => true,
 			'show_ui' => true,
 			'capability_type' => 'post',
