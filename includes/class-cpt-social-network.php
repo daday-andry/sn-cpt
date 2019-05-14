@@ -72,7 +72,7 @@ class Cpt_Social_Network {
 		} else {
 			$this->version = '1.0.0';
 		}
-		$this->plugin_name = 'cpt-social-network';
+		$this->plugin_name = 'sn-cpt';
 
 		$this->load_dependencies();
 		$this->set_locale();
@@ -103,31 +103,31 @@ class Cpt_Social_Network {
 		 * The class responsible for orchestrating the actions and filters of the
 		 * core plugin.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-cpt-social-network-loader.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-sn-cpt-loader.php';
 
 		/**
 		 * The class responsible for defining internationalization functionality
 		 * of the plugin.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-cpt-social-network-i18n.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-sn-cpt-i18n.php';
 
 		/**
 		 * The class responsible for defining all actions that occur in the admin area.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-cpt-social-network-admin.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-sn-cpt-admin.php';
 
 		/**
 		 * The class responsible for defining all actions that occur in the public-facing
 		 * side of the site.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-cpt-social-network-public.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-sn-cpt-public.php';
 
 
 		/**
 		 * For widgets
 		 * 
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-cpt-social-network-widgets.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-sn-cpt-widgets.php';
 
 		$this->loader = new Cpt_Social_Network_Loader();
 

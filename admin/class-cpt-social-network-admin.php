@@ -72,7 +72,7 @@ class Cpt_Social_Network_Admin {
 		 * between the defined hooks and the functions defined in this
 		 * class.
 		 */
-		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/cpt-social-network-admin.css', array(), $this->version, 'all' );
+		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/sn-cpt-admin.css', array(), $this->version, 'all' );
 
 	}
 
@@ -95,13 +95,13 @@ class Cpt_Social_Network_Admin {
 		 * class.
 		 */
 
-		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/cpt-social-network-admin.js', array( 'jquery' ), $this->version, false );
+		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/sn-cpt-admin.js', array( 'jquery' ), $this->version, false );
 	}
 	public function add_admin_menu(){
 		add_menu_page("Social Network CPT", "SN CPT Config", "manage_options","cpt_config",array($this,'admin_page'));
 	}
 	public function admin_page(){
-		include_once 'partials/cpt-social-network-admin-display.php';
+		include_once 'partials/sn-cpt-admin-display.php';
 	}
 
 
